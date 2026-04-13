@@ -1,0 +1,15 @@
+<div class="container" (click)="tooltipShow()">
+  <input
+    class="pose-input"
+    type="number"
+    [disabled]="pose.disabled"
+    [placeholder]="pose | servTranslate: 'comment'"
+  >
+  <div
+    class="pose-tooltip"
+    [class.hidden]="tooltipHidden"
+    *ngIf="tooltip"
+    #tooltipEL>
+    {{tooltip}}
+  </div>
+</div>

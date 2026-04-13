@@ -1,0 +1,7 @@
+<ng-container *ngIf="preloaderService.on$ | async">
+  <div class="preloader-overlay">
+    <div class="preloader">
+      <img src="assets/images/preview_cat_transparent.gif" alt="wait please...">
+    </div>
+  </div>
+</ng-container>

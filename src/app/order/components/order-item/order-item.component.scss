@@ -1,0 +1,21 @@
+.item-test-info {
+  background: var(--error-text);
+  opacity: 0.8;
+  width: 100%;
+}
+.item {
+  border: 2px solid var(--accent-primary);
+  border-radius: 20px;
+  padding: 1rem;
+
+  &-underline-poses {
+    display: block;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .item {
+    width: 700px;
+  }
+}

@@ -1,0 +1,13 @@
+.footer {
+  background: white;
+  box-shadow: 0 -2px 10px rgba(0, 120, 131, 0.08);
+  border-top: 2px solid var(--accent-primary);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}

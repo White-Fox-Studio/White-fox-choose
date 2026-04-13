@@ -1,0 +1,26 @@
+<div class="container" >
+  <div class="header-info-name">
+    <div class="header-info-name-sku">{{info.sku}}</div>
+    <div class="header-info-name-name">{{info | servTranslate: 'name'}}</div>
+  </div>
+
+  <div class="header">
+    <div class="header-img" *ngIf="imgUrl">
+      <img
+        [src]="imgUrl"
+        (click)="window.open(imgUrl, '_blank')"
+        [alt]="(info | servTranslate: 'name') + ' ' + info.sizeLabel">
+    </div>
+    <div class="header-info" [class.complex]="isComplex">
+      <div class="header-info-size"> Size: {{info.sizeLabel}}</div>
+      <div
+        class="header-info-underline"
+        *ngIf="underline"
+      >{{underline}}</div>
+      <div class="header-info-slots">
+        <ng-content></ng-content>
+      </div>
+    </div>
+  </div>
+
+</div>

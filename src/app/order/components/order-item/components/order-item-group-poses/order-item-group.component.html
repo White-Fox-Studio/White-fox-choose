@@ -1,0 +1,22 @@
+<div class="container">
+  <div
+    class="group"
+    *ngFor="let layout of layouts">
+    <div class="group-img" *ngIf="layout.groupImageUrl">
+      <img
+        [src]="layout.groupImageUrl"
+        (click)="window.open(layout.groupImageUrl, '_blank')"
+        alt="">
+    </div>
+    <div class="group-body">
+      <div
+        class="group-body-comment"
+        *ngIf="getUnderline(layout) as underline"
+      >{{underline}}</div>
+      <app-order-item-poses
+        class="group-body-poses"
+        [layout]="layout"></app-order-item-poses>
+
+    </div>
+  </div>
+</div>

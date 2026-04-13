@@ -1,0 +1,1505 @@
+import {OrderResponse} from "./order.model";
+
+const TEST_MOCK: OrderResponse = {
+  "success": true,
+  "orderId": "b58cdd49-7daa-455e-91fb-64822de2f2e2",
+  "orderStatus": "pending",
+  "student": {
+    "firstName": "Test",
+    "lastName": "FamilyTest",
+    "classGrade": "b1"
+  },
+  "items": [
+    {
+      "orderItemId": "65446f3c-8a1b-4207-85dc-442ec8867baf",
+      "itemIndex": 1,
+      "sku": "A11",
+      "nameEN": "ACRYLIC PHOTO + CLASS LOGO",
+      "nameTH": "ภาพถ่ายอะคริลิค + โลโก้ชั้นเรียน",
+      "sizeLabel": "8x12\"",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        },
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "77432ec6-dcdf-468f-adb2-7c89627ae067",
+      "itemIndex": 1,
+      "sku": "W14",
+      "nameEN": "FLOAT FRAME",
+      "nameTH": "กรอบลอย",
+      "sizeLabel": "8x12\"",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "8ff5af1b-fecf-4373-8476-253f05f36b6e",
+      "itemIndex": 1,
+      "sku": "C14",
+      "nameEN": "CANVAS",
+      "nameTH": "ภาพแคนวาส",
+      "sizeLabel": "16x16\"",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "916b9b70-f12a-4daa-998f-0c0cca2ece1a",
+      "itemIndex": 1,
+      "sku": "C15",
+      "nameEN": "CANVAS (DESIGN)",
+      "nameTH": "ภาพแคนวาส (ดีไซน์พิเศษ)",
+      "sizeLabel": "20x20\"",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "83cc35c5-c939-477f-a61c-e64a6a6781b9",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "88022acc-b8fb-40f3-ae47-bb4abbf8b16b",
+              "title": "Photo 2",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "94364578-d07a-4114-b9ec-c41264e5f685",
+              "title": "Photo 3",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "d4c4a8bd-11e3-4bf0-b527-eaaf13b7652e",
+              "title": "Photo 4",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "dba28bf4-fd6e-4fb8-93c1-6bd68ff80b0d",
+              "title": "Photo 5",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "136d8db9-c7be-4781-a86e-99521b809040",
+              "title": "Photo 6",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "902969a4-0a42-420e-be0e-b1cb841314e2",
+              "title": "Photo 7",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "7b493bc7-a69b-4099-b199-a4cde342ba49",
+              "title": "Photo 8",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "9bee87e7-a2e4-4403-a09f-50d3379e285b",
+              "title": "Photo 9",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "f1afb6c3-912a-4b0d-8553-37ac3382dc9e",
+      "itemIndex": 1,
+      "sku": "F15",
+      "nameEN": "INSTAX MAGNET (2 PCS)",
+      "nameTH": "แม็กเน็ตภาพ Instax 2 ชิ้น",
+      "sizeLabel": "3x3.5\"",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "51391405-1e06-49be-b0bf-a4c73566d7bb",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "e3f1a2ab-2c74-4d4d-8d68-5a8df6573e53",
+              "title": "Photo 2",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "ab4c1e0b-ce58-4924-8e58-1333e1217e06",
+      "itemIndex": 1,
+      "sku": "K11",
+      "nameEN": "WALL CALENDAR (13 PAGES)",
+      "nameTH": "ปฏิทินติดผนัง 13 หน้า",
+      "sizeLabel": "30x42 cm",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "c38dc2c3-1f7b-45fd-9db6-d9727dd60b50",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "5999693a-5f55-409b-8fb5-42d62fb1ddae",
+              "title": "Photo 2",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "8dc3597b-1634-4ae7-b639-87b8d7043e84",
+              "title": "Photo 3",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "e6249488-b614-4c1d-a959-91bf211a9d26",
+              "title": "Photo 4",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "62d3a66a-6c15-486f-815c-1eb32c6605ee",
+              "title": "Photo 5",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "623d1acc-96d5-44b7-b97c-93c9379f3f12",
+              "title": "Photo 6",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "5b755f61-16e0-42b7-9a7f-85ea459784f7",
+              "title": "Photo 7",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "8a428673-037b-48fd-ac8d-557ba2281b38",
+              "title": "Photo 8",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "e6ae726b-250d-4640-8d3f-b2fcd0bc87c7",
+              "title": "Photo 9",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "09c069c7-1b67-41e2-8d8f-d80ba34e9a1a",
+              "title": "Photo 10",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "f4de5e26-d6ff-4e79-b888-e2c1b1c6b7f9",
+              "title": "Photo 11",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "eb7e1165-3b1e-404f-a5b8-0567d7ae5e24",
+              "title": "Photo 12",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "8ee08f71-d1f1-4ffa-af78-91d1a3070f01",
+              "title": "Photo 13",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "da36384c-c38b-4751-a063-b82c21f67260",
+              "title": "Photo 14",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "960267e7-61c7-4f5b-9291-40ec94b3c55e",
+              "title": "Photo 15",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "e9b4ff38-cce4-42b3-b133-1a999047b759",
+              "title": "Photo 16",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "1c5c3ba5-ae77-4735-817a-34ee514ce94e",
+              "title": "Photo 17",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "6716bb5e-ee5e-45b9-8e4d-3c43349a6887",
+              "title": "Photo 18",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "733ab4ce-db6e-4225-a7df-5f8a3cbff608",
+              "title": "Photo 19",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "39748aa6-79ae-4093-a50b-a43d66def88b",
+              "title": "Photo 20",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "3708756a-10b8-4c21-9868-8660caf5030e",
+      "itemIndex": 1,
+      "sku": "D12",
+      "nameEN": "MUG (INDIVIDUAL)",
+      "nameTH": "แก้วมัคสกรีนภาพเดี่ยว",
+      "sizeLabel": "350 ml",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "7324c768-c303-421f-b5a9-645fb5877c93",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "cb04e825-d24c-494b-b51f-2dbd754e5d1c",
+              "title": "Photo 2",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "7cc22e5d-ada9-407b-9e85-e11500a62141",
+              "title": "Photo 3",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "c47481db-b475-42a0-b273-af070968929e",
+              "title": "Photo 4",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "bf0c326f-16e7-4884-aa38-620ceac976fc",
+      "itemIndex": 1,
+      "sku": "S12",
+      "nameEN": "ACRYLIC STAND (GIRL)",
+      "nameTH": "แท่นอะคริลิคหัวโยกดุ๊กดิ๊ก รุ่นเด็กผู้หญิง",
+      "sizeLabel": "10x10 cm",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "orderItemId": "48b2c95d-bdf9-4bd8-a2da-d9c08a1da8e9",
+      "itemIndex": 1,
+      "sku": "E12",
+      "nameEN": "NOTEBOOK (HARDCOVER)",
+      "nameTH": "สมุดโน้ตปกแข็ง (มีเส้น)",
+      "sizeLabel": "6x8\"",
+      "selectionType": "simple",
+      "layouts": [
+        {
+          "groupImageUrl": null,
+          "slots": [
+            {
+              "slotId": "3c3b17b7-2330-428a-8446-546ea51fd030",
+              "title": "Photo 1",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "064c492e-ea38-4670-a562-87ee1cd20d2b",
+              "title": "Photo 2",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "8a77d4b1-7e02-4f60-a64a-8e55c3807f9f",
+              "title": "Photo 3",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "6c540b09-4e3c-418f-9358-9369a7e9bc2b",
+              "title": "Photo 4",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "f6f68405-a01d-49bf-bdda-eaead3aad772",
+              "title": "Photo 5",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            },
+            {
+              "slotId": "ebdbf815-cf4a-45f6-a399-7ff83a8f0037",
+              "title": "Photo 6",
+              "disabled": false,
+              "min": 1000,
+              "max": 9999,
+              "underlineCommentEN": "Select photo",
+              "underlineCommentTH": "เลือกรูปภาพ",
+              "tooltipEN": null,
+              "tooltipTH": null,
+              "savedPhoto": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "packageId": "rdgtfgdxfxgfxdg",
+      "sku": "Q1",
+      "nameEN": "fgdfg",
+      "nameTH": "sdfgdfg",
+      "products": [
+        {
+          "orderItemId": "65446f3c-8a1b-4207-85dc-442ec8867baf",
+          "itemIndex": 1,
+          "sku": "A11",
+          "nameEN": "ACRYLIC PHOTO + CLASS LOGO",
+          "nameTH": "ภาพถ่ายอะคริลิค + โลโก้ชั้นเรียน",
+          "sizeLabel": "8x12\"",
+          "selectionType": "simple",
+          "layouts": [
+            {
+              "groupImageUrl": null,
+              "slots": [
+                {
+                  "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+                  "title": "Photo 1",
+                  "disabled": false,
+                  "min": 1000,
+                  "max": 9999,
+                  "underlineCommentEN": "Select photo",
+                  "underlineCommentTH": "เลือกรูปภาพ",
+                  "tooltipEN": null,
+                  "tooltipTH": null,
+                  "savedPhoto": null
+                }
+              ]
+            },
+            {
+              "groupImageUrl": null,
+              "slots": [
+                {
+                  "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+                  "title": "Photo 1",
+                  "disabled": false,
+                  "min": 1000,
+                  "max": 9999,
+                  "underlineCommentEN": "Select photo",
+                  "underlineCommentTH": "เลือกรูปภาพ",
+                  "tooltipEN": null,
+                  "tooltipTH": null,
+                  "savedPhoto": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderItemId": "77432ec6-dcdf-468f-adb2-7c89627ae067",
+          "itemIndex": 1,
+          "sku": "W14",
+          "nameEN": "FLOAT FRAME",
+          "nameTH": "กรอบลอย",
+          "sizeLabel": "8x12\"",
+          "selectionType": "simple",
+          "layouts": [
+            {
+              "groupImageUrl": null,
+              "slots": [
+                {
+                  "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+                  "title": "Photo 1",
+                  "disabled": false,
+                  "min": 1000,
+                  "max": 9999,
+                  "underlineCommentEN": "Select photo",
+                  "underlineCommentTH": "เลือกรูปภาพ",
+                  "tooltipEN": null,
+                  "tooltipTH": null,
+                  "savedPhoto": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "orderItemId": "8ff5af1b-fecf-4373-8476-253f05f36b6e",
+          "itemIndex": 1,
+          "sku": "C14",
+          "nameEN": "CANVAS",
+          "nameTH": "ภาพแคนวาส",
+          "sizeLabel": "16x16\"",
+          "selectionType": "simple",
+          "layouts": [
+            {
+              "groupImageUrl": null,
+              "slots": [
+                {
+                  "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+                  "title": "Photo 1",
+                  "disabled": false,
+                  "min": 1000,
+                  "max": 9999,
+                  "underlineCommentEN": "Select photo",
+                  "underlineCommentTH": "เลือกรูปภาพ",
+                  "tooltipEN": null,
+                  "tooltipTH": null,
+                  "savedPhoto": null
+                }
+              ]
+            }
+          ]
+        },
+      ]
+    }
+  ]
+}
+export const ORDER_MOCK: OrderResponse = {
+  "success": true,
+  "orderId": "b58cdd49-7daa-455e-91fb-64822de2f2e2",
+  "orderStatus": "pending",
+  "student": {
+    "firstName": "Test",
+    "lastName": "FamilyTest",
+    "classGrade": "b1"
+  },
+  "items": [
+    {
+      "orderItemId": "65446f3c-8a1b-4207-85dc-442ec8867baf",
+      "itemIndex": 1,
+      "sku": "A11",
+      "nameEN": "ACRYLIC PHOTO + CLASS LOGO",
+      "nameTH": "ภาพถ่ายอะคริลิค + โลโก้ชั้นเรียน",
+      "sizeLabel": "8x12\"",
+      "selectionType": "simple",
+      "layouts": [ {
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "orderItemId": "77432ec6-dcdf-468f-adb2-7c89627ae067",
+      "itemIndex": 1,
+      "sku": "W14",
+      "nameEN": "FLOAT FRAME",
+      "nameTH": "กรอบลอย",
+      "sizeLabel": "8x12\"",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "orderItemId": "8ff5af1b-fecf-4373-8476-253f05f36b6e",
+      "itemIndex": 1,
+      "sku": "C14",
+      "nameEN": "CANVAS",
+      "nameTH": "ภาพแคนวาส",
+      "sizeLabel": "16x16\"",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }
+      ]
+    },
+    {
+      "orderItemId": "916b9b70-f12a-4daa-998f-0c0cca2ece1a",
+      "itemIndex": 1,
+      "sku": "C15",
+      "nameEN": "CANVAS (DESIGN)",
+      "nameTH": "ภาพแคนวาส (ดีไซน์พิเศษ)",
+      "sizeLabel": "20x20\"",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "83cc35c5-c939-477f-a61c-e64a6a6781b9",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "88022acc-b8fb-40f3-ae47-bb4abbf8b16b",
+            "title": "Photo 2",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "94364578-d07a-4114-b9ec-c41264e5f685",
+            "title": "Photo 3",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "d4c4a8bd-11e3-4bf0-b527-eaaf13b7652e",
+            "title": "Photo 4",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "dba28bf4-fd6e-4fb8-93c1-6bd68ff80b0d",
+            "title": "Photo 5",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "136d8db9-c7be-4781-a86e-99521b809040",
+            "title": "Photo 6",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "902969a4-0a42-420e-be0e-b1cb841314e2",
+            "title": "Photo 7",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "7b493bc7-a69b-4099-b199-a4cde342ba49",
+            "title": "Photo 8",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "9bee87e7-a2e4-4403-a09f-50d3379e285b",
+            "title": "Photo 9",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }]
+    },
+    {
+      "orderItemId": "f1afb6c3-912a-4b0d-8553-37ac3382dc9e",
+      "itemIndex": 1,
+      "sku": "F15",
+      "nameEN": "INSTAX MAGNET (2 PCS)",
+      "nameTH": "แม็กเน็ตภาพ Instax 2 ชิ้น",
+      "sizeLabel": "3x3.5\"",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "51391405-1e06-49be-b0bf-a4c73566d7bb",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "e3f1a2ab-2c74-4d4d-8d68-5a8df6573e53",
+            "title": "Photo 2",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }]
+    },
+    {
+      "orderItemId": "ab4c1e0b-ce58-4924-8e58-1333e1217e06",
+      "itemIndex": 1,
+      "sku": "K11",
+      "nameEN": "WALL CALENDAR (13 PAGES)",
+      "nameTH": "ปฏิทินติดผนัง 13 หน้า",
+      "sizeLabel": "30x42 cm",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "c38dc2c3-1f7b-45fd-9db6-d9727dd60b50",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "5999693a-5f55-409b-8fb5-42d62fb1ddae",
+            "title": "Photo 2",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "8dc3597b-1634-4ae7-b639-87b8d7043e84",
+            "title": "Photo 3",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "e6249488-b614-4c1d-a959-91bf211a9d26",
+            "title": "Photo 4",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "62d3a66a-6c15-486f-815c-1eb32c6605ee",
+            "title": "Photo 5",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "623d1acc-96d5-44b7-b97c-93c9379f3f12",
+            "title": "Photo 6",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "5b755f61-16e0-42b7-9a7f-85ea459784f7",
+            "title": "Photo 7",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "8a428673-037b-48fd-ac8d-557ba2281b38",
+            "title": "Photo 8",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "e6ae726b-250d-4640-8d3f-b2fcd0bc87c7",
+            "title": "Photo 9",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "09c069c7-1b67-41e2-8d8f-d80ba34e9a1a",
+            "title": "Photo 10",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "f4de5e26-d6ff-4e79-b888-e2c1b1c6b7f9",
+            "title": "Photo 11",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "eb7e1165-3b1e-404f-a5b8-0567d7ae5e24",
+            "title": "Photo 12",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "8ee08f71-d1f1-4ffa-af78-91d1a3070f01",
+            "title": "Photo 13",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "da36384c-c38b-4751-a063-b82c21f67260",
+            "title": "Photo 14",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "960267e7-61c7-4f5b-9291-40ec94b3c55e",
+            "title": "Photo 15",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "e9b4ff38-cce4-42b3-b133-1a999047b759",
+            "title": "Photo 16",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "1c5c3ba5-ae77-4735-817a-34ee514ce94e",
+            "title": "Photo 17",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "6716bb5e-ee5e-45b9-8e4d-3c43349a6887",
+            "title": "Photo 18",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "733ab4ce-db6e-4225-a7df-5f8a3cbff608",
+            "title": "Photo 19",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "39748aa6-79ae-4093-a50b-a43d66def88b",
+            "title": "Photo 20",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }]
+    },
+    {
+      "orderItemId": "3708756a-10b8-4c21-9868-8660caf5030e",
+      "itemIndex": 1,
+      "sku": "D12",
+      "nameEN": "MUG (INDIVIDUAL)",
+      "nameTH": "แก้วมัคสกรีนภาพเดี่ยว",
+      "sizeLabel": "350 ml",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "7324c768-c303-421f-b5a9-645fb5877c93",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "cb04e825-d24c-494b-b51f-2dbd754e5d1c",
+            "title": "Photo 2",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "7cc22e5d-ada9-407b-9e85-e11500a62141",
+            "title": "Photo 3",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "c47481db-b475-42a0-b273-af070968929e",
+            "title": "Photo 4",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }]
+    },
+    {
+      "orderItemId": "bf0c326f-16e7-4884-aa38-620ceac976fc",
+      "itemIndex": 1,
+      "sku": "S12",
+      "nameEN": "ACRYLIC STAND (GIRL)",
+      "nameTH": "แท่นอะคริลิคหัวโยกดุ๊กดิ๊ก รุ่นเด็กผู้หญิง",
+      "sizeLabel": "10x10 cm",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "801d8de8-3d8b-4454-b64b-a6636086df2c",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }]
+    },
+    {
+      "orderItemId": "48b2c95d-bdf9-4bd8-a2da-d9c08a1da8e9",
+      "itemIndex": 1,
+      "sku": "E12",
+      "nameEN": "NOTEBOOK (HARDCOVER)",
+      "nameTH": "สมุดโน้ตปกแข็ง (มีเส้น)",
+      "sizeLabel": "6x8\"",
+      "selectionType": "simple",
+      "layouts": [{
+        "groupImageUrl": null,
+        "slots": [
+          {
+            "slotId": "3c3b17b7-2330-428a-8446-546ea51fd030",
+            "title": "Photo 1",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "064c492e-ea38-4670-a562-87ee1cd20d2b",
+            "title": "Photo 2",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "8a77d4b1-7e02-4f60-a64a-8e55c3807f9f",
+            "title": "Photo 3",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "6c540b09-4e3c-418f-9358-9369a7e9bc2b",
+            "title": "Photo 4",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "f6f68405-a01d-49bf-bdda-eaead3aad772",
+            "title": "Photo 5",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          },
+          {
+            "slotId": "ebdbf815-cf4a-45f6-a399-7ff83a8f0037",
+            "title": "Photo 6",
+            "disabled": false,
+            "min": 1000,
+            "max": 9999,
+            "underlineCommentEN": "Select photo",
+            "underlineCommentTH": "เลือกรูปภาพ",
+            "tooltipEN": null,
+            "tooltipTH": null,
+            "savedPhoto": null
+          }
+        ]
+      }]
+    }
+  ]
+}

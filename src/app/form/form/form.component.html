@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="header">
+    <h3>
+      {{ 'formTitle' | language}}
+    </h3>
+  </div>
+  <div class="form">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <div class="form-item">
+        <input
+          class="form-item-input"
+          formControlName="orderNumber"
+          [placeholder]="'formOrderNumberPlaceholder' | language"
+          type="number">
+        <div
+          class="form-item-error"
+          *ngIf="orderNumber.hasError('required') && orderNumber.touched"
+          >{{'formOrderNumberError' | language}}</div>
+      </div>
+      <div class="form-item">
+        <input
+          class="form-item-input"
+          formControlName="studentLastName"
+          [appInputRestrict]="englishLettersPattern"
+          (inputRejected)="onStudentLastNameError($event)"
+          [placeholder]="'formStudentLastNamePlaceholder' | language"
+          type="text">
+        <div
+          class="form-item-error"
+          *ngFor="let errorKey of studentLastNameErrors"
+          >{{errorKey | language}}</div>
+      </div>
+      <div class="form-submit">
+        <button
+          class="form-submit-button"
+          type="submit"
+          [disabled]="form.invalid"
+        >{{'formStudentNameSubmitButton' | language}}</button>
+      </div>
+    </form>
+  </div>
+</div>

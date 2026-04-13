@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.pose {
+  &-input {
+    border: 2px solid var(--border-dark);
+    border-radius: 50px;
+    padding: 0.5rem 0;
+    width: 64px;
+    max-width: 64px;
+    text-align: center;
+
+    &:disabled {
+      border: none;
+      background-color: var(--shadow-error);
+    }
+  }
+
+  &-tooltip {
+    position: absolute;
+    top: -37px;
+    width: max-content;
+    background: white;
+    border: 2px solid var(--shadow-error);
+    padding: 0.3rem 0.5rem;
+    border-radius: 15px;
+
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s 0s;
+
+    &.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.5s ease, visibility 0s 0.5s;
+    }
+  }
+
+}

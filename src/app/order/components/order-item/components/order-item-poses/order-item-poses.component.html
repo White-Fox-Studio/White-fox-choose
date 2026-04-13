@@ -1,0 +1,6 @@
+<div class="container">
+  <app-order-item-pose
+    *ngFor="let pose of layout.slots; trackBy: trackFn"
+    [pose]="pose"
+  ></app-order-item-pose>
+</div>

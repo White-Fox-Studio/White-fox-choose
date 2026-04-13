@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  //--teal: #007883;
+  //--teal-dark: #0a6570;
+  //--teal-light: #d4e9ec;
+  //--border: #e2e8f0;
+  //--red: #dc2626;
+  //--red-light: #fee2e2;
+  //--slot-filled: #c8e6df;
+  //--auto-bg: #f1f3f4;
+  //--auto-border: #9ca3af;
+
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+
+  --bg-primary: #f5f7fa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-nav: #ffffff;
+  --bg-button: #f1f5f9;
+  --bg-cart: #ffffff;
+  --bg-form: #f8fafc;
+  --text-primary: #1e293b;
+  --text-secondary: #334155;
+  --text-muted: #546e7a;
+  --border-color: #e9eef2;
+  --border-dark: #d1d9e2;
+  --accent-primary: #007883;
+  --accent-hover: #0a6570;
+  --accent-light: #d9f0f2;
+  --accent-shadow: rgba(0, 120, 131, 0.3);
+  --shadow-color: rgba(0, 120, 131, 0.2);
+  --price-color: #007883;
+  --in-cart-bg: #e0f2f5;
+  --in-cart-text: #007883;
+  --success-bg: #e3f7e3;
+  --success-text: #2e7d5e;
+  --error-bg: #ffe8e5;
+  --error-text: #c44536;
+  --shadow-error: rgba(196, 69, 54, 0.3);
+  --red-warning: #d32f2f;
+  --modal-overlay: rgba(0, 0, 0, 0.5);
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

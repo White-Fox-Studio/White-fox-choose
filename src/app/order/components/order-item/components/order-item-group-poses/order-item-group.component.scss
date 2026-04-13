@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--accent-primary);
+
+  &-img {
+    width: 49%;
+    min-width: 49%;
+    max-width: 200px;
+
+    & img {
+      width: 100%;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &-comment {
+      font-size: 20px;
+    }
+
+    &-poses {
+      display: flex;
+      flex: 1;
+    }
+  }
+}
+
+@media (min-width: 534px) {
+  .group-img {
+    width: 220px;
+    min-width: 220px;
+    max-width: 220px;
+  }
+}

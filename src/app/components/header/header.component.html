@@ -1,0 +1,15 @@
+<div class="header">
+  <div class="logo">
+    <img
+      class="logo-img"
+      alt="White Fox"
+      src="/assets/images/LOGO.png"
+    />
+    <span
+      class="logo-text"
+      [class.hidden]="studentShow$ | async"
+    >WHITE FOX STUDIO</span>
+    <app-student-info *ngIf="studentShow$ | async"></app-student-info>
+  </div>
+  <div class="language" (click)="toggleLanguage()">{{ 'languageSign' | language }}</div>
+</div>

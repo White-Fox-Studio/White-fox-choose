@@ -1,0 +1,16 @@
+<div class="item">
+  <app-order-item-header
+    [info]="info"
+    [imgUrl]="simpleImgUrl"
+    [isComplex]="!isSimple"
+    [underline]="underline"
+  >
+    <app-order-item-poses *ngIf="isShort" [layout]="firstLayout"></app-order-item-poses>
+  </app-order-item-header>
+  <app-order-item-poses
+    class="item-underline-poses"
+    *ngIf="isSimple && !isShort"
+    [layout]="firstLayout"
+  ></app-order-item-poses>
+  <app-order-item-group *ngIf="!isSimple" [layouts]="item.layouts"></app-order-item-group>
+</div>

@@ -1,0 +1,14 @@
+<ng-container *ngIf="modalService.modalState$ | async as modal">
+  <div class="modal-overlay" *ngIf="modal.opened" (click)="modalService.close()">
+    <div class="modal-box" (click)="$event.stopPropagation()">
+      <div class="modal-box-header">
+        <h3>{{modal.title}}</h3>
+        <button class="modal-box-header-btn" (click)="modalService.close()">OK</button>
+      </div>
+      <div class="modal-box-body">
+        {{modal.message}}
+      </div>
+    </div>
+  </div>
+</ng-container>
+
