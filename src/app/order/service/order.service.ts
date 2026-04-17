@@ -2,6 +2,8 @@ import {Injectable} from '@angular/core';
 import {Order, OrderResponse, Student} from "../model/order.model";
 import {BehaviorSubject, Observable, tap} from "rxjs";
 import {HttpClient} from "@angular/common/http";
+import {StorageService} from "../storage/storage.service";
+import {OrderRequest} from "../storage/storage.model";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,8 @@ export class OrderService {
   public student$ = this.student.asObservable()
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private storageService: StorageService,
   ) { }
 
   getOrder(orderNumber: string, studentLastName: string): Observable<Order> {
@@ -23,8 +26,13 @@ export class OrderService {
       }
     }).pipe(
       tap((response: OrderResponse) => {
-        this.student.next(response.student)
+        this.student.next(response.student);
+        this.storageService.setOrder(response);
       })
     );
+  }
+
+  sendCustomerSelection(data: OrderRequest) {
+    return this.http.post(`/api/submit-order`, data)
   }
 }

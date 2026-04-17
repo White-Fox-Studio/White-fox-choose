@@ -5,6 +5,7 @@ export interface OrderResponse extends Order {
 export interface Order {
   orderId: string;
   orderStatus: 'pending' | 'completed';
+  isReadOnly: boolean;
   student: Student;
   items: (ProductItem | Package)[]
 }
@@ -52,6 +53,12 @@ export interface Pose {
   commentTH?: string;
   tooltipEN?: string | null;
   tooltipTH?: string | null;
-  min?: number;
-  max?: number;
+  min: number;
+  max: number;
+}
+
+export interface IdKeys {
+  orderId: string;
+  orderItemId: string;
+  itemIndex: number;
 }

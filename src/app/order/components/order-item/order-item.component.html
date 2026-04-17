@@ -1,16 +1,28 @@
-<div class="item">
+<div class="item scroll-anchor">
   <app-order-item-header
     [info]="info"
     [imgUrl]="simpleImgUrl"
     [isComplex]="!isSimple"
     [underline]="underline"
   >
-    <app-order-item-poses *ngIf="isShort" [layout]="firstLayout"></app-order-item-poses>
+    <app-order-item-poses
+      *ngIf="isShort"
+      [layout]="firstLayout"
+      [keys]="keys"
+      [saved]="saved"
+    ></app-order-item-poses>
   </app-order-item-header>
   <app-order-item-poses
     class="item-underline-poses"
     *ngIf="isSimple && !isShort"
     [layout]="firstLayout"
+    [keys]="keys"
+    [saved]="saved"
   ></app-order-item-poses>
-  <app-order-item-group *ngIf="!isSimple" [layouts]="item.layouts"></app-order-item-group>
+  <app-order-item-group
+    *ngIf="!isSimple"
+    [layouts]="item.layouts"
+    [keys]="keys"
+    [saved]="saved"
+  ></app-order-item-group>
 </div>

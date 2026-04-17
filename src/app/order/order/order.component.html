@@ -4,11 +4,22 @@
     <ng-container *ngFor="let item of order.items; trackBy: trackByFn">
       <app-order-item
         class="order-item"
-        *ngIf="!isProduct(item)"
+        *ngIf="!isPackage(item)"
         [item]="item"
+        [saved]="order.isReadOnly"
       ></app-order-item>
+      <app-order-package
+        *ngIf="isPackage(item)"
+        [package]="item"
+        [saved]="order.isReadOnly"
+      ></app-order-package>
 
     </ng-container>
+    <div
+      class="order-button"
+      *ngIf="!order.isReadOnly"
+      [class.disabled]="sendDisabled | async"
+      (click)="sendOrder()"
+    >{{ 'sendOrderButton' | language}}</div>
   </div>
-  <div class="order-button">ORDER BUTTON</div>
 </div>

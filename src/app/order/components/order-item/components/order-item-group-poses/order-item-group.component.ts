@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Layout} from "../../../../model/order.model";
+import {IdKeys, Layout} from "../../../../model/order.model";
 import {LanguageService} from "../../../../../language/language-service/language.service";
 
 @Component({
@@ -9,6 +9,8 @@ import {LanguageService} from "../../../../../language/language-service/language
 })
 export class OrderItemGroupComponent {
   @Input() layouts: Layout[] = [];
+  @Input() keys!: IdKeys;
+  @Input() saved = false;
 
   constructor(private languageService: LanguageService) {
   }

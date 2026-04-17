@@ -10,4 +10,7 @@ export const EN_DICTIONARY: IDictionary = {
   formStudentLastNameSymbolError: 'Forbidden character entered. Please use english letters only',
   formStudentLastNamePasteError: 'Forbidden text pasted. Please use english letters only',
   formStudentNameSubmitButton: 'Continue',
+  poseErrorMessageBody: 'Photo number should be between',
+  poseErrorMessageTo: 'to',
+  sendOrderButton: 'Save Choices'
 }

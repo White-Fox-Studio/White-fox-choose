@@ -14,6 +14,12 @@
   caret-color: transparent;
 
   &-name {
-    margin-right: 1.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &-count {
+    padding-left: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.6rem;
   }
 }

@@ -1,15 +1,15 @@
 <div class="container" (click)="tooltipShow()">
   <input
     class="pose-input"
+    [class.readonly]="saved"
+    [class.invalid]="invalid || highlight"
     type="number"
-    [disabled]="pose.disabled"
+    [formControl]="poseControl"
     [placeholder]="pose | servTranslate: 'comment'"
   >
   <div
     class="pose-tooltip"
     [class.hidden]="tooltipHidden"
-    *ngIf="tooltip"
     #tooltipEL>
-    {{tooltip}}
   </div>
 </div>

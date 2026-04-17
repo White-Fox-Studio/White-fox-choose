@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Layout, Pose} from "../../../../model/order.model";
+import {IdKeys, Layout, Pose} from "../../../../model/order.model";
 
 @Component({
   selector: 'app-order-item-poses',
@@ -8,6 +8,8 @@ import {Layout, Pose} from "../../../../model/order.model";
 })
 export class OrderItemPosesComponent {
   @Input() layout!: Layout;
+  @Input() keys!: IdKeys;
+  @Input() saved = false;
 
   trackFn(index: number, pose: Pose) {
     return pose.slotId;

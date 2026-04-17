@@ -8,4 +8,7 @@ export interface IDictionary {
   formStudentLastNameSymbolError: string;
   formStudentLastNamePasteError: string;
   formStudentNameSubmitButton: string;
+  poseErrorMessageBody: string,
+  poseErrorMessageTo: string,
+  sendOrderButton: string,
 }

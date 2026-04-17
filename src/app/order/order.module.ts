@@ -9,6 +9,9 @@ import { OrderItemGroupComponent } from './components/order-item/components/orde
 import { OrderItemPoseComponent } from './components/order-item/components/order-item-pose/order-item-pose.component';
 import {ServTranslatePipe} from "../language/serv-translate/serv-translate.pipe";
 import { OrderItemPosesComponent } from './components/order-item/components/order-item-poses/order-item-poses.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import {LanguagePipe} from "../language/language-pipe/language.pipe";
+import { OrderPackageComponent } from './components/order-package/order-package.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +21,15 @@ import { OrderItemPosesComponent } from './components/order-item/components/orde
     OrderItemHeaderComponent,
     OrderItemGroupComponent,
     OrderItemPoseComponent,
-    OrderItemPosesComponent
+    OrderItemPosesComponent,
+    OrderPackageComponent
   ],
-    imports: [
-        CommonModule,
-        OrderRoutingModule,
-        ServTranslatePipe,
-    ]
+  imports: [
+    CommonModule,
+    OrderRoutingModule,
+    ServTranslatePipe,
+    ReactiveFormsModule,
+    LanguagePipe,
+  ]
 })
 export class OrderModule { }

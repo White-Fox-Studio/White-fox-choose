@@ -4,11 +4,12 @@ import {
   RouterStateSnapshot,
   ActivatedRouteSnapshot
 } from '@angular/router';
-import {catchError, EMPTY, finalize, Observable} from 'rxjs';
+import {catchError, EMPTY, finalize, Observable, tap} from 'rxjs';
 import {OrderService} from "../service/order.service";
 import {Order} from "../model/order.model";
 import {ModalService} from "../../modal/service/modal.service";
 import {PreloaderService} from "../../preloader/service/preloader.service";
+import {StorageService} from "../storage/storage.service";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,8 @@ export class OrderResolver implements Resolve<Order | null> {
   constructor(
     private orderService: OrderService,
     private modalService: ModalService,
-    private preloaderService: PreloaderService
+    private preloaderService: PreloaderService,
+    private storageService: StorageService,
   ) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Order | never> {
@@ -45,10 +47,10 @@ export class OrderResolver implements Resolve<Order | null> {
           }),
           finalize(() => {
             this.preloaderService.turnOff();
-          })
+          }),
         )
     }
-    this.modalService.open('','')
+    this.modalService.open('Ошибка','Ошибка ввода данных')
     return EMPTY;
   }
 }

@@ -9,5 +9,8 @@ export const ThDictionary: IDictionary = {
   formStudentLastNameRequiredError: 'ต้องใช้นามสกุลของนักเรียน',
   formStudentLastNameSymbolError: 'ตัวละครต้องห้ามเข้ามา กรุณาใช้อักษรภาษาอังกฤษเท่านั้น',
   formStudentLastNamePasteError: 'ข้อความต้องห้ามวาง กรุณาใช้อักษรภาษาอังกฤษเท่านั้น',
-  formStudentNameSubmitButton: 'ดำเนินการ'
+  formStudentNameSubmitButton: 'ดำเนินการ',
+  poseErrorMessageBody: 'หมายเลขภาพควรอยู่ระหว่าง',
+  poseErrorMessageTo: 'ถึง',
+  sendOrderButton: 'บันทึกตัวเลือก'
 }

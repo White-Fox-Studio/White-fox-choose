@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import {Student} from "../../model/order.model";
+import {StorageService} from "../../storage/storage.service";
 
 @Component({
   selector: 'app-order-header',
@@ -8,4 +9,11 @@ import {Student} from "../../model/order.model";
 })
 export class OrderHeaderComponent {
   @Input() student!: Student;
+
+  constructor(private storageService: StorageService) {
+  }
+
+  get filledAll$() {
+    return this.storageService.filledAll$
+  }
 }

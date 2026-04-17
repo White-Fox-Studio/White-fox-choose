@@ -1,6 +1,6 @@
 <div class="container">
   <div
-    class="group"
+    class="group scroll-anchor"
     *ngFor="let layout of layouts">
     <div class="group-img" *ngIf="layout.groupImageUrl">
       <img
@@ -15,7 +15,10 @@
       >{{underline}}</div>
       <app-order-item-poses
         class="group-body-poses"
-        [layout]="layout"></app-order-item-poses>
+        [layout]="layout"
+        [keys]="keys"
+        [saved]="saved"
+      ></app-order-item-poses>
 
     </div>
   </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {OrderService} from "../../order/service/order.service";
+import {StorageService} from "../../order/storage/storage.service";
 
 @Component({
   selector: 'app-student-info',
@@ -8,7 +9,11 @@ import {OrderService} from "../../order/service/order.service";
 })
 export class StudentInfoComponent {
 
-  constructor(public orderService: OrderService) {
+  constructor(public orderService: OrderService, private storageService: StorageService) {
+  }
+
+  get filledAll$() {
+    return this.storageService.filledAll$
   }
 
 }

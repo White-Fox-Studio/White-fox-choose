@@ -12,7 +12,10 @@
         [alt]="(info | servTranslate: 'name') + ' ' + info.sizeLabel">
     </div>
     <div class="header-info" [class.complex]="isComplex">
-      <div class="header-info-size"> Size: {{info.sizeLabel}}</div>
+      <div
+        class="header-info-size"
+        *ngIf="info.sizeLabel && info.sizeLabel.length > 0"
+      > Size: {{info.sizeLabel}}</div>
       <div
         class="header-info-underline"
         *ngIf="underline"
