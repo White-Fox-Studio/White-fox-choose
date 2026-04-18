@@ -6,6 +6,7 @@ import {Order} from "../model/order.model";
 import {ModalService} from "../../modal/service/modal.service";
 import {PreloaderService} from "../../preloader/service/preloader.service";
 import {StorageService} from "../storage/storage.service";
+import {LanguageService} from "../../language/language-service/language.service";
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class OrderResolver implements Resolve<Order | null> {
     private orderService: OrderService,
     private modalService: ModalService,
     private preloaderService: PreloaderService,
-    private storageService: StorageService,
+    private languageService: LanguageService,
   ) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<Order | never> {
@@ -32,13 +33,14 @@ export class OrderResolver implements Resolve<Order | null> {
             console.log(error.status);
             if (error.status === 400) {
               this.modalService.open(
-                'Заказ не найден',
-                'Заказ не найден или фамилия не совпадает'
+                this.languageService.translate('notFoundErrorTitle'),
+                this.languageService.translate('notFoundErrorMessage')
               )
             } else {
               this.modalService.open(
-                'Ошибка',
-                'Что-то пошло не так, повторите попытку позже')
+                this.languageService.translate('internalServerErrorTitle'),
+                this.languageService.translate('internalServerErrorMessage')
+              )
             }
 
             return EMPTY;
