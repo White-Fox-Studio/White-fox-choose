@@ -1,10 +1,35 @@
+# Информация для управления контентом:
+
+Управлять контентом можно правя определенные файлы напрямую в гитхаб.
+
+Чтобы изменения применились их нужно закоммитить в основную ветку.
+
+Очень желательно в коммитах писать суть изменений.
+
+## Словари
+
+Английский - `src/assets/i18n/en.json`
+
+Тайский - `src/assets/i18n/th.json`
+
+Очень важно - не меняйте названия ключей, только значения
+
+## Копирайт
+
+## Футер
+
+***
+
 # App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11. with Vercel engine.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `vercel dev` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+If you want to share app in local Wifi network run `vercel dev --listen 0.0.0.0:3000`. Run `ipconfig` in another console, find ipV4 address of your local network. 
+Navigate to `{ipV4 address}:3000`
 
 ## Code scaffolding
 
