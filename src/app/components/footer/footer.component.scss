@@ -6,8 +6,40 @@
   margin: 0 auto;
   padding: 0.6rem 1.5rem;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  font-size: 0.8rem;
+
+  &-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-address {
+      display: flex;
+      flex-direction: column;
+
+      &-line {
+        white-space: nowrap;
+        padding-bottom: 0.3rem;
+        margin: 0;
+
+        &.wrap {
+          white-space: normal;
+        }
+      }
+    }
+  }
+
+  &-copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &-link {
+      padding-bottom: 0.3rem;
+    }
+  }
 }

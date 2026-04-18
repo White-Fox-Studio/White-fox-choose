@@ -12,6 +12,7 @@ import { StudentInfoComponent } from './components/student-info/student-info.com
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
 import { ServTranslatePipe } from './language/serv-translate/serv-translate.pipe';
+import { CopyrightComponent } from './components/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ServTranslatePipe } from './language/serv-translate/serv-translate.pipe
     FooterComponent,
     ModalComponent,
     PreloaderComponent,
-    StudentInfoComponent
+    StudentInfoComponent,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,
