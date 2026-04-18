@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {IdKeys, Package, PackageInfo, PackageLayout} from "../../model/order.model";
+import {Package, PackageInfo, PackageLayout} from "../../model/order.model";
 
 @Component({
   selector: 'app-order-package',

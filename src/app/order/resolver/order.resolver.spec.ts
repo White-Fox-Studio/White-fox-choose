@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { OrderResolver } from './order.resolver';
+import {OrderResolver} from './order.resolver';
 
 describe('OrderResolver', () => {
   let resolver: OrderResolver;

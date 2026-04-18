@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {PreloaderService} from "./service/preloader.service";
 
 @Component({

@@ -1,6 +1,6 @@
-import { TestBed } from '@angular/core/testing';
+import {TestBed} from '@angular/core/testing';
 
-import { PreloaderService } from './preloader.service';
+import {PreloaderService} from './preloader.service';
 
 describe('PreloaderService', () => {
   let service: PreloaderService;

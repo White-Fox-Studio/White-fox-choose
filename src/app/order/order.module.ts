@@ -1,18 +1,22 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { OrderComponent } from './order/order.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {OrderComponent} from './order/order.component';
 import {OrderRoutingModule} from "./order-routing.module";
-import { OrderHeaderComponent } from './components/order-header/order-header.component';
-import { OrderItemComponent } from './components/order-item/order-item.component';
-import { OrderItemHeaderComponent } from './components/order-item/components/order-item-header/order-item-header.component';
-import { OrderItemGroupComponent } from './components/order-item/components/order-item-group-poses/order-item-group.component';
-import { OrderItemPoseComponent } from './components/order-item/components/order-item-pose/order-item-pose.component';
+import {OrderHeaderComponent} from './components/order-header/order-header.component';
+import {OrderItemComponent} from './components/order-item/order-item.component';
+import {
+  OrderItemHeaderComponent
+} from './components/order-item/components/order-item-header/order-item-header.component';
+import {
+  OrderItemGroupComponent
+} from './components/order-item/components/order-item-group-poses/order-item-group.component';
+import {OrderItemPoseComponent} from './components/order-item/components/order-item-pose/order-item-pose.component';
 import {ServTranslatePipe} from "../language/serv-translate/serv-translate.pipe";
-import { OrderItemPosesComponent } from './components/order-item/components/order-item-poses/order-item-poses.component';
+import {OrderItemPosesComponent} from './components/order-item/components/order-item-poses/order-item-poses.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import {LanguagePipe} from "../language/language-pipe/language.pipe";
-import { OrderPackageComponent } from './components/order-package/order-package.component';
-import { PackageHeaderComponent } from './components/order-package/components/package-header/package-header.component';
+import {OrderPackageComponent} from './components/order-package/order-package.component';
+import {PackageHeaderComponent} from './components/order-package/components/package-header/package-header.component';
 
 @NgModule({
   declarations: [

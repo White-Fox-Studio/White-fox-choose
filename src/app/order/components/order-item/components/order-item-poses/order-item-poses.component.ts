@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {IdKeys, Layout, Pose} from "../../../../model/order.model";
+import {Layout, Pose} from "../../../../model/order.model";
 
 @Component({
   selector: 'app-order-item-poses',

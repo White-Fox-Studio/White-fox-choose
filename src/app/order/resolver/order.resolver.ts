@@ -1,10 +1,6 @@
-import { Injectable } from '@angular/core';
-import {
-  Resolve,
-  RouterStateSnapshot,
-  ActivatedRouteSnapshot
-} from '@angular/router';
-import {catchError, EMPTY, finalize, Observable, tap} from 'rxjs';
+import {Injectable} from '@angular/core';
+import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/router';
+import {catchError, EMPTY, finalize, Observable} from 'rxjs';
 import {OrderService} from "../service/order.service";
 import {Order} from "../model/order.model";
 import {ModalService} from "../../modal/service/modal.service";

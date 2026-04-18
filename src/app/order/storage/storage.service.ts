@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {getSlotKeyBySelection, OrderRequest, SelectionItem} from "./storage.model";
 import {BehaviorSubject, map, Observable} from "rxjs";
 import {getSlotKey, Order, ProductItem} from "../model/order.model"

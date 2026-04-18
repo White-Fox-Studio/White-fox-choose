@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { CopyrightComponent } from "./components/copyright/copyright.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {CopyrightComponent} from "./components/copyright/copyright.component";
 
 const routes: Routes = [{
   path: '', redirectTo: 'form', pathMatch: 'full',
