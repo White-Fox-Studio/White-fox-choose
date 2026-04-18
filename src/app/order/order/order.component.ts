@@ -5,6 +5,9 @@ import {OrderService} from "../service/order.service";
 import {PosesFilledAll, StorageService} from "../storage/storage.service";
 import {filter, map, Observable, take} from "rxjs";
 import {FocusService} from "../service/focus/focus.service";
+import {ModalService} from "../../modal/service/modal.service";
+import {PreloaderService} from "../../preloader/service/preloader.service";
+import {LanguageService} from "../../language/language-service/language.service";
 
 @Component({
   selector: 'app-order',
@@ -18,7 +21,11 @@ export class OrderComponent implements OnInit, OnDestroy {
     private route: ActivatedRoute,
     private storageService: StorageService,
     private focusService: FocusService,
-    private orderService: OrderService,) {
+    private orderService: OrderService,
+    private modalService: ModalService,
+    private preloader: PreloaderService,
+    private languageService: LanguageService,
+    ) {
   }
 
   ngOnInit() {
@@ -49,13 +56,19 @@ export class OrderComponent implements OnInit, OnDestroy {
     ).subscribe((disabled) => {
       if (disabled) {
         const firstEmpty = this.storageService.getFirstEmpty();
-        if (!firstEmpty) { return }
-        this.focusService.highlight(firstEmpty);
+        if (firstEmpty) {
+          this.focusService.highlight(firstEmpty);
+        }
       } else {
+        this.preloader.turnOn();
         const order = this.storageService.getOrderRequest();
         this.orderService.sendCustomerSelection(order).subscribe(
           (data) => {
-            console.log(data)
+            this.preloader.turnOff();
+            this.modalService.open(
+              this.languageService.translate('sendSuccessTitle'),
+              this.languageService.translate('sendSuccessMessage')
+            )
           }
         )
         console.log(order);

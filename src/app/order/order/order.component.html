@@ -9,6 +9,7 @@
         [saved]="order.isReadOnly"
       ></app-order-item>
       <app-order-package
+        class="order-item"
         *ngIf="isPackage(item)"
         [package]="item"
         [saved]="order.isReadOnly"

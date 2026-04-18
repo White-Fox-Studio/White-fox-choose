@@ -8,7 +8,6 @@ import {IdKeys, Layout, Pose} from "../../../../model/order.model";
 })
 export class OrderItemPosesComponent {
   @Input() layout!: Layout;
-  @Input() keys!: IdKeys;
   @Input() saved = false;
 
   trackFn(index: number, pose: Pose) {

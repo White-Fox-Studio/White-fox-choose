@@ -32,6 +32,8 @@ export class OrderResolver implements Resolve<Order | null> {
       return this.orderService.getOrder(orderId, studentLastName)
         .pipe(
           catchError((error) => {
+            console.log(error);
+            console.log(error.status);
             if (error.status === 400) {
               this.modalService.open(
                 'Заказ не найден',

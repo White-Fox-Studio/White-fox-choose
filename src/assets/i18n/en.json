@@ -1,0 +1,16 @@
+{
+  "languageSign": "EN",
+  "formTitle": "Enter order details",
+  "formOrderNumberPlaceholder": "Order number",
+  "formOrderNumberError": "Order number is required",
+  "formStudentLastNamePlaceholder": "Student's last name",
+  "formStudentLastNameRequiredError": "Student's last name is required",
+  "formStudentLastNameSymbolError": "Forbidden character entered. Please use english letters only",
+  "formStudentLastNamePasteError": "Forbidden text pasted. Please use english letters only",
+  "formStudentNameSubmitButton": "Continue",
+  "poseErrorMessageBody": "Photo number should be between",
+  "poseErrorMessageTo": "to",
+  "sendOrderButton": "Save Choices",
+  "sendSuccessTitle": "Your choice saved successfully.",
+  "sendSuccessMessage": "All photos saved, order sent for printing </br></br> If you have made a mistake or changed your mind, you can change your choice on this page within 72 hours"
+}

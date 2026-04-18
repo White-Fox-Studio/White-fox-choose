@@ -10,7 +10,6 @@ export class OrderItemHeaderComponent {
   @Input() info!: ProductItemInfo;
   @Input() imgUrl: string | null = null;
   @Input() isComplex: boolean = false;
-  @Input() isPackage: boolean = false;
   @Input() underline: string | null = null;
 
   protected readonly window = window;

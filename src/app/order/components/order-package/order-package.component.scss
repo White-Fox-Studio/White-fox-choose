@@ -1,0 +1,11 @@
+.item {
+  border: 2px solid var(--accent-primary);
+  border-radius: 20px;
+  padding: 1rem;
+}
+
+@media (min-width: 720px) {
+  .item {
+    width: 700px;
+  }
+}

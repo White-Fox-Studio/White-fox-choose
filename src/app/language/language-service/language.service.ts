@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 import {Language} from "../../models/language.model";
-import {EN_DICTIONARY} from "../dictionaries/dictionary.en";
-import {ThDictionary} from "../dictionaries/dictionary.th";
 import {IDictionary} from "../dictionaries/dictionary.model";
+import * as enJson from "../../../assets/i18n/en.json"
+import * as thJson from "../../../assets/i18n/th.json"
+
+export const EN_DICTIONARY: IDictionary = enJson as unknown as IDictionary;
+export const TH_DICTIONARY: IDictionary = thJson as unknown as IDictionary;
 
 @Injectable({
   providedIn: 'root'
@@ -13,14 +16,13 @@ export class LanguageService {
 
   private dictionary: {[key: string]: IDictionary} = {
     en: EN_DICTIONARY,
-    th: ThDictionary
+    th: TH_DICTIONARY
   }
 
   translate(key: string): string {
     const lang = this.language.getValue();
-    if (this.dictionary[lang].hasOwnProperty(key)) {
-      const value = (this.dictionary[lang] as unknown as {[key: string]: string})[key]
-      return value;
+    if (key in this.dictionary[lang]) {
+      return (this.dictionary[lang] as unknown as {[key: string]: string})[key];
     }
     return key; // Если перевода нет, вернем сам ключ
   }

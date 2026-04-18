@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {OrderRequest, SelectionItem} from "./storage.model";
+import {getSlotKeyBySelection, OrderRequest, SelectionItem} from "./storage.model";
 import {BehaviorSubject, map, Observable} from "rxjs";
-import {Order, ProductItem} from "../model/order.model"
+import {getSlotKey, Order, ProductItem} from "../model/order.model"
 
 export type SelectionDictionary = Record<string, SelectionItem>;
 export type PosesFilledAll = [number, number];
@@ -9,6 +9,7 @@ export type PosesFilledAll = [number, number];
 export interface IFirstEmpty {
   orderItemId: string;
   slotId: string;
+  index: number;
 }
 
 @Injectable({
@@ -32,10 +33,11 @@ export class StorageService {
 
       item.layouts.forEach((layout) => {
         layout.slots.forEach((slot) => {
-          const {slotId, savedPhoto, disabled} = slot;
-          const key = `${orderItemId}_${slotId}`;
+          const {slotId, savedPhoto, disabled, index: slotIndex} = slot;
+          const key = getSlotKey(slot);
           const value: SelectionItem = {
             slotId,
+            slotIndex,
             orderItemId,
             itemIndex,
             disabled
@@ -61,6 +63,7 @@ export class StorageService {
               ...itemsMap
             }
           }, {})
+
           result = {
             ...result,
             ...items
@@ -116,7 +119,7 @@ export class StorageService {
 
   // Положить данные по конкретному элементу текущего заказа в хранилище
   updateSelection(selection: SelectionItem) {
-    const key = `${selection.orderItemId}_${selection.slotId}`
+    const key = getSlotKeyBySelection(selection)
 
     const newSelections = {
       ...this.selections.value,
@@ -131,7 +134,7 @@ export class StorageService {
 
   // Получить значение конкретного элемента по текущему заказу
   getPhotoNumber(selection: SelectionItem): number | null {
-    const key = `${selection.orderItemId}_${selection.slotId}`
+    const key = getSlotKeyBySelection(selection)
     const value = this.selections.value[key]
     if (!value) {
       return null
@@ -173,7 +176,8 @@ export class StorageService {
         const values = key.split("_");
         const orderItemId = values[0];
         const slotId = values[1];
-        return {orderItemId, slotId}
+        const index = Number(values[2])
+        return {orderItemId, slotId, index}
       }
 
     }

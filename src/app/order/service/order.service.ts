@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Order, OrderResponse, Student} from "../model/order.model";
-import {BehaviorSubject, Observable, tap} from "rxjs";
+import {BehaviorSubject, map, Observable, tap} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {StorageService} from "../storage/storage.service";
 import {OrderRequest} from "../storage/storage.model";
@@ -25,6 +25,39 @@ export class OrderService {
         studentLastName: studentLastName,
       }
     }).pipe(
+      map(response => {
+        let index = 0;
+        response.items.forEach((item) => {
+          if ('packageId' in item) {
+            item.products.forEach(product => {
+              product.layouts.forEach(layout => {
+                layout.slots.forEach(slot => {
+                  slot.key = {
+                    orderId: response.orderId,
+                    orderItemId: product.orderItemId,
+                    itemIndex: product.itemIndex,
+                  }
+                  slot.index = index;
+                  index++;
+                })
+              })
+            })
+          } else {
+            item.layouts.forEach(layout => {
+              layout.slots.forEach(slot => {
+                slot.key = {
+                  orderId: response.orderId,
+                  orderItemId: item.orderItemId,
+                  itemIndex: item.itemIndex,
+                }
+                slot.index = index;
+                index++;
+              })
+            })
+          }
+        })
+        return response
+      }),
       tap((response: OrderResponse) => {
         this.student.next(response.student);
         this.storageService.setOrder(response);

@@ -12,6 +12,7 @@ import { OrderItemPosesComponent } from './components/order-item/components/orde
 import {ReactiveFormsModule} from "@angular/forms";
 import {LanguagePipe} from "../language/language-pipe/language.pipe";
 import { OrderPackageComponent } from './components/order-package/order-package.component';
+import { PackageHeaderComponent } from './components/order-package/components/package-header/package-header.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { OrderPackageComponent } from './components/order-package/order-package.
     OrderItemGroupComponent,
     OrderItemPoseComponent,
     OrderItemPosesComponent,
-    OrderPackageComponent
+    OrderPackageComponent,
+    PackageHeaderComponent
   ],
   imports: [
     CommonModule,

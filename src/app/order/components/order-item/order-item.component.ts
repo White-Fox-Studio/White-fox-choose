@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import {IdKeys, ProductItem, ProductItemInfo} from "../../model/order.model";
+import {ProductItem, ProductItemInfo} from "../../model/order.model";
 import {LanguageService} from "../../../language/language-service/language.service";
 
 @Component({
@@ -9,7 +9,6 @@ import {LanguageService} from "../../../language/language-service/language.servi
 })
 export class OrderItemComponent {
   @Input() item!: ProductItem
-  @Input() orderId!: string;
   @Input() saved = false;
 
   constructor(private languageService: LanguageService) {
@@ -46,14 +45,5 @@ export class OrderItemComponent {
     const comment = this.language === 'en' ? this.firstLayout.underlineEN : this.firstLayout.underlineTH;
     return comment ?? null;
   }
-
-  get keys():IdKeys {
-    return {
-      orderId: this.orderId,
-      orderItemId: this.item.orderItemId,
-      itemIndex: this.item.itemIndex,
-    }
-  }
-
 
 }

@@ -11,4 +11,6 @@ export interface IDictionary {
   poseErrorMessageBody: string,
   poseErrorMessageTo: string,
   sendOrderButton: string,
+  sendSuccessTitle: string,
+  sendSuccessMessage: string,
 }

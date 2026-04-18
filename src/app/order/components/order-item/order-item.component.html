@@ -8,7 +8,6 @@
     <app-order-item-poses
       *ngIf="isShort"
       [layout]="firstLayout"
-      [keys]="keys"
       [saved]="saved"
     ></app-order-item-poses>
   </app-order-item-header>
@@ -16,13 +15,11 @@
     class="item-underline-poses"
     *ngIf="isSimple && !isShort"
     [layout]="firstLayout"
-    [keys]="keys"
     [saved]="saved"
   ></app-order-item-poses>
   <app-order-item-group
     *ngIf="!isSimple"
     [layouts]="item.layouts"
-    [keys]="keys"
     [saved]="saved"
   ></app-order-item-group>
 </div>

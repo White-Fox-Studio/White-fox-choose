@@ -9,7 +9,7 @@ import {
   Output,
   ViewChild
 } from '@angular/core';
-import {IdKeys, Pose} from "../../../../model/order.model";
+import {getSlotKey, Pose} from "../../../../model/order.model";
 import {LanguageService} from "../../../../../language/language-service/language.service";
 import {FormControl, Validators} from "@angular/forms";
 import {StorageService} from "../../../../storage/storage.service";
@@ -24,7 +24,6 @@ import {FocusService} from "../../../../service/focus/focus.service";
 })
 export class OrderItemPoseComponent implements OnInit, OnDestroy {
   @Input() pose!: Pose;
-  @Input() keys!: IdKeys;
   @Input() saved = false;
   @Output() filled: EventEmitter<string> = new EventEmitter(); // ???? или сразу здесь класть в storage
   tooltipHidden = true;
@@ -84,7 +83,10 @@ export class OrderItemPoseComponent implements OnInit, OnDestroy {
     this.focusService.target.pipe(
         takeUntil(this.untilDestroy$),
       filter((target) => {
-        return target.orderItemId === this.keys.orderItemId && target.slotId === this.pose.slotId
+        const {orderItemId } = this.pose.key
+        return target.orderItemId === orderItemId &&
+          target.slotId === this.pose.slotId &&
+          target.index === this.pose.index
       })
       ).subscribe(() => {
         const anchor = (this.el.nativeElement as HTMLElement).closest('.scroll-anchor');
@@ -166,8 +168,9 @@ export class OrderItemPoseComponent implements OnInit, OnDestroy {
   mapSelectionItem(value?: number) {
     const item: SelectionItem = {
       slotId: this.pose.slotId,
-      orderItemId: this.keys.orderItemId,
-      itemIndex: this.keys.itemIndex,
+      slotIndex: this.pose.index,
+      orderItemId: this.pose.key.orderItemId,
+      itemIndex: this.pose.key.itemIndex,
       disabled: this.pose.disabled,
     }
     if (!!value) {
