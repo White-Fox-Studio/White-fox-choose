@@ -78,6 +78,10 @@ select {
     outline: none;
     border-color: var(--accent-primary);
   }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 }
 
 .scroll-anchor {
