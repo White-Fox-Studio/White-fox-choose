@@ -19,19 +19,17 @@ export class InputRestrictDirective {
 
   @HostListener('keydown', ['$event'])
   onKeyDown(event: KeyboardEvent) {
-    // 1. Разрешаем все комбинации с Ctrl или Cmd (Mac) - копирование, вставка, выделение
-    if (event.ctrlKey || event.metaKey) {
+    if (
+      event.ctrlKey || // Разрешаем все комбинации с Ctrl или Cmd (Mac)
+      event.metaKey || // - копирование, вставка, выделение
+      event.key.length > 1 || // У служебных клавиш длина всегда больше 1 ('Backspace', 'ArrowLeft', 'Delete', 'Enter').
+      event.key === 'Unidentified' // И ОБЯЗАТЕЛЬНО пропускаем мобильные подсказки 'Unidentified'
+    ) {
       return;
     }
-
-    // У служебных клавиш длина всегда больше 1 ('Backspace', 'ArrowLeft', 'Delete', 'Enter').
-    if (event.key.length > 1) {
-      return;
-    }
-
 
     if (!this.pattern.test(event.key)) {
-      event.preventDefault(); // Запрещаем ввод
+      event.preventDefault();
       this.inputRejected.emit(RestrictDirectiveErrors.symbol);
     }
   }
@@ -41,7 +39,7 @@ export class InputRestrictDirective {
     const clipboardData = event.clipboardData;
     if (!clipboardData) return;
 
-    const pastedText = clipboardData.getData('text');
+    const pastedText = clipboardData.getData('text').trim();
     if (!this.pattern.test(pastedText)) {
       event.preventDefault();
       this.inputRejected.emit(RestrictDirectiveErrors.paste);
@@ -51,12 +49,19 @@ export class InputRestrictDirective {
   @HostListener('input', ['$event'])
   onInput(event: InputEvent) {
     const input = event.target as HTMLInputElement;
-    const value = input.value;
+    const value = input.value.trim();
+
+    const resetValue = (value: string)=> {
+      input.value = value;
+      if (this.ngControl && this.ngControl.control) {
+        this.ngControl.control.setValue(clean, { emitEvent: false });
+      }
+    }
 
     let clean = ""
     let rejected = ""
 
-    for (const char of input.value) {
+    for (const char of value) {
       if (this.pattern.test(char)) {
         clean += char;
       } else {
@@ -65,18 +70,13 @@ export class InputRestrictDirective {
     }
 
     if (rejected !== "") {
-      input.value = clean;
-
-      if (this.ngControl && this.ngControl.control) {
-        this.ngControl.control.setValue(clean, { emitEvent: false });
-      }
+      resetValue(clean)
 
       this.inputRejected.emit(
         rejected.length > 1? RestrictDirectiveErrors.paste : RestrictDirectiveErrors.symbol
       );
-
+    } else if (value !== input.value) {
+      resetValue(value)
     }
-
   }
-
 }

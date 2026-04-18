@@ -125,7 +125,6 @@ export class StorageService {
       ...this.selections.value,
       [key]: selection
     }
-    console.log(selection)
 
     this.selections.next(newSelections);
     localStorage.setItem(this.currentOrderID, JSON.stringify(newSelections));

@@ -41,6 +41,13 @@
       border: 2px solid var(--border-color);
       border-radius: 40px;
       padding: 0.5rem 1.2rem;
+      transition: border-color 0.3s ease;
+      color: var(--text-primary);
+
+      &:focus {
+        outline: none;
+        border-color: var(--accent-primary);
+      }
 
       &::placeholder {
         font-size: 0.75rem;
