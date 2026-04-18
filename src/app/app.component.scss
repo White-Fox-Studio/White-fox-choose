@@ -1,3 +1,9 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .content {
   max-width: 1400px;
   margin: 62px auto 0;
@@ -8,8 +14,6 @@
   width: 100vw;
 }
 
-.filler{
-  max-width: 300px;
-  white-space: normal;
-  word-break: break-all;
+app-header, app-footer {
+  flex-shrink: 0;
 }

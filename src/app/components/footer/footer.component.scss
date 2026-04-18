@@ -1,34 +1,71 @@
+//.footer {
+//  background: white;
+//  box-shadow: 0 -2px 10px rgba(0, 120, 131, 0.08);
+//  border-top: 2px solid var(--accent-primary);
+//  max-width: 1400px;
+//  margin: 0 auto;
+//  padding: 0.6rem 1.5rem;
+//  display: flex;
+//  align-items: stretch;
+//  justify-content: space-between;
+//  flex-wrap: nowrap;
+//  gap: 1rem;
+//  font-size: 0.8rem;
+//
+//  &-info {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: space-between;
+//
+//    &-address {
+//      display: flex;
+//      flex-direction: column;
+//
+//      &-line {
+//        white-space: nowrap;
+//        padding-bottom: 0.3rem;
+//        margin: 0;
+//
+//        &.wrap {
+//          white-space: normal;
+//        }
+//      }
+//    }
+//  }
+//
+//  &-copyright {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: flex-end;
+//
+//    &-link {
+//      padding-bottom: 0.3rem;
+//    }
+//  }
+//}
+/* Главный контейнер футера */
 .footer {
   background: white;
   box-shadow: 0 -2px 10px rgba(0, 120, 131, 0.08);
   border-top: 2px solid var(--accent-primary);
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0.6rem 1.5rem;
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  gap: 1rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  width: 100%;
+
   font-size: 0.8rem;
+  color: var(--text-primary);
 
   &-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    &-address-line {
+      margin: 0 0 6px 0;
 
-    &-address {
-      display: flex;
-      flex-direction: column;
-
-      &-line {
-        white-space: nowrap;
-        padding-bottom: 0.3rem;
-        margin: 0;
-
-        &.wrap {
-          white-space: normal;
-        }
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -36,10 +73,33 @@
   &-copyright {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    align-items: flex-end;
+    //justify-content: flex-start;
+    text-align: right;
 
     &-link {
-      padding-bottom: 0.3rem;
+      margin-bottom: 6px;
+    }
+
+    &-info {
+      color: var(--text-secondary);
+      font-size: 0.75rem;
+      max-width: 400px
+    }
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+
+    &-copyright {
+      text-align: left;
+      align-items: flex-start;
+
+      &-info {
+        max-width: none;
+      }
     }
   }
 }
