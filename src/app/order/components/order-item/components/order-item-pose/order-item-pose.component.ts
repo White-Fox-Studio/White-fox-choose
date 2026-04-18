@@ -9,7 +9,7 @@ import {
   Output,
   ViewChild
 } from '@angular/core';
-import {getSlotKey, Pose} from "../../../../model/order.model";
+import {Pose} from "../../../../model/order.model";
 import {LanguageService} from "../../../../../language/language-service/language.service";
 import {FormControl, Validators} from "@angular/forms";
 import {StorageService} from "../../../../storage/storage.service";

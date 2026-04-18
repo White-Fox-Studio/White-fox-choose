@@ -1,17 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
-import { LanguagePipe } from './language/language-pipe/language.pipe';
-import { ModalComponent } from './modal/modal.component';
-import { PreloaderComponent } from './preloader/preloader.component';
-import { StudentInfoComponent } from './components/student-info/student-info.component';
+import {LanguagePipe} from './language/language-pipe/language.pipe';
+import {ModalComponent} from './modal/modal.component';
+import {PreloaderComponent} from './preloader/preloader.component';
+import {StudentInfoComponent} from './components/student-info/student-info.component';
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
-import { ServTranslatePipe } from './language/serv-translate/serv-translate.pipe';
+import {ServTranslatePipe} from './language/serv-translate/serv-translate.pipe';
+import {CopyrightComponent} from './components/copyright/copyright.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ServTranslatePipe } from './language/serv-translate/serv-translate.pipe
     FooterComponent,
     ModalComponent,
     PreloaderComponent,
-    StudentInfoComponent
+    StudentInfoComponent,
+    CopyrightComponent
   ],
   imports: [
     BrowserModule,

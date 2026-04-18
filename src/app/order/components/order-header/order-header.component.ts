@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Student} from "../../model/order.model";
 import {StorageService} from "../../storage/storage.service";
 

@@ -1,4 +1,4 @@
-import { LanguagePipe } from './language.pipe';
+import {LanguagePipe} from './language.pipe';
 
 describe('LanguagePipe', () => {
   it('create an instance', () => {

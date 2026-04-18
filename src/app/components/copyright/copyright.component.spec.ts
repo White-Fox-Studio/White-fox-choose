@@ -1,18 +1,18 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {PackageHeaderComponent} from './package-header.component';
+import {CopyrightComponent} from './copyright.component';
 
-describe('PackageHeaderComponent', () => {
-  let component: PackageHeaderComponent;
-  let fixture: ComponentFixture<PackageHeaderComponent>;
+describe('CopyrightComponent', () => {
+  let component: CopyrightComponent;
+  let fixture: ComponentFixture<CopyrightComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PackageHeaderComponent ]
+      declarations: [ CopyrightComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PackageHeaderComponent);
+    fixture = TestBed.createComponent(CopyrightComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

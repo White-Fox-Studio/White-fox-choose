@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { OrderItemGroupComponent } from './order-item-group.component';
+import {OrderItemGroupComponent} from './order-item-group.component';
 
 describe('OpderItemGroupPosesComponent', () => {
   let component: OrderItemGroupComponent;

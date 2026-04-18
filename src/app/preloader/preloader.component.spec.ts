@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PreloaderComponent } from './preloader.component';
+import {PreloaderComponent} from './preloader.component';
 
 describe('PreloaderComponent', () => {
   let component: PreloaderComponent;

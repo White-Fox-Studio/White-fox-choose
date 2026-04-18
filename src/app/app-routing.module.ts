@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import {AppComponent} from "./app.component";
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {CopyrightComponent} from "./components/copyright/copyright.component";
 
 const routes: Routes = [{
   path: '', redirectTo: 'form', pathMatch: 'full',
@@ -10,6 +10,8 @@ const routes: Routes = [{
 },{
   path: 'order/:orderId/:studentLastName',
   loadChildren: () => import('./order/order.module').then(m => m.OrderModule),
+},{
+  path: 'copyright', component: CopyrightComponent
 },{
   path: '**', redirectTo: 'form', pathMatch: 'full',
 }];

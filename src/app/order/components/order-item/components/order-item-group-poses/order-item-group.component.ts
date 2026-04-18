@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Layout, PackageLayout} from "../../../../model/order.model";
 import {LanguageService} from "../../../../../language/language-service/language.service";
 
@@ -7,15 +7,11 @@ import {LanguageService} from "../../../../../language/language-service/language
   templateUrl: './order-item-group.component.html',
   styleUrls: ['./order-item-group.component.scss']
 })
-export class OrderItemGroupComponent implements OnInit {
+export class OrderItemGroupComponent {
   @Input() layouts: (Layout | PackageLayout)[] = [];
   @Input() saved = false;
 
   constructor(private languageService: LanguageService) {
-  }
-
-  ngOnInit() {
-    console.log('group ngOnInit', this.layouts);
   }
 
   get language() {

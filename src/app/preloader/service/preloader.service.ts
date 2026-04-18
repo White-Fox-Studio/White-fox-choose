@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 
 @Injectable({
@@ -11,12 +11,10 @@ export class PreloaderService {
   constructor() { }
 
   turnOn() {
-    console.log('show preloader')
     this.on.next(true);
   }
 
   turnOff() {
-    console.log('hide preloader')
     this.on.next(false);
   }
 }

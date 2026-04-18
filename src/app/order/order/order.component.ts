@@ -1,9 +1,9 @@
-import {Component, OnDestroy, OnInit, TrackByFunction} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Order, Package, ProductItem} from "../model/order.model";
 import {ActivatedRoute} from "@angular/router";
 import {OrderService} from "../service/order.service";
 import {PosesFilledAll, StorageService} from "../storage/storage.service";
-import {filter, map, Observable, take} from "rxjs";
+import {filter, map, take} from "rxjs";
 import {FocusService} from "../service/focus/focus.service";
 import {ModalService} from "../../modal/service/modal.service";
 import {PreloaderService} from "../../preloader/service/preloader.service";
@@ -30,7 +30,6 @@ export class OrderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.route.data.subscribe(order => {
-      console.log(order);
       this.order = order['order'] as Order;
     })
   }
@@ -63,7 +62,7 @@ export class OrderComponent implements OnInit, OnDestroy {
         this.preloader.turnOn();
         const order = this.storageService.getOrderRequest();
         this.orderService.sendCustomerSelection(order).subscribe(
-          (data) => {
+          () => {
             this.preloader.turnOff();
             this.modalService.open(
               this.languageService.translate('sendSuccessTitle'),
@@ -71,7 +70,6 @@ export class OrderComponent implements OnInit, OnDestroy {
             )
           }
         )
-        console.log(order);
       }
     })
   }

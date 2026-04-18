@@ -16,7 +16,15 @@
 
 ## Копирайт
 
+`src/app/components/copyright/copyright.component.html`
+
+Пожалуйста помните что HTML должен оставаться валидным, работайте только с текстом
+
 ## Футер
+
+`src/app/components/footer/footer.component.html`
+
+Пожалуйста помните что HTML должен оставаться валидным, работайте только с текстом
 
 ***
 

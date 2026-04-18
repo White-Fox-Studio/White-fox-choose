@@ -1,4 +1,4 @@
-import { InputRestrictDirective } from './input-restrict.directive';
+import {InputRestrictDirective} from './input-restrict.directive';
 
 describe('InputRestrictDirective', () => {
   it('should create an instance', () => {
