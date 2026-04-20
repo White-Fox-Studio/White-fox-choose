@@ -13,6 +13,7 @@ import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
 import {ServTranslatePipe} from './language/serv-translate/serv-translate.pipe';
 import {CopyrightComponent} from './components/copyright/copyright.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import {CopyrightComponent} from './components/copyright/copyright.component';
     NgOptimizedImage,
     HttpClientModule,
     LanguagePipe,
-    ServTranslatePipe
+    ServTranslatePipe,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   exports: [
