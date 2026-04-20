@@ -30,5 +30,7 @@ export class LanguageService {
   toggleLanguage() {
     const newLanguage = this.language.getValue() === 'th' ? 'en' : 'th';
     this.language.next(newLanguage);
+    document.title = 'White Fox Studio — ' +
+      (newLanguage === 'th' ? 'เลือกรูปภาพ' : 'Choose Photo');
   }
 }
