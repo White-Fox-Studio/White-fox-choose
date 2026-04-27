@@ -5,9 +5,9 @@ import {OrderService} from "../service/order.service";
 import {PosesFilledAll, StorageService} from "../storage/storage.service";
 import {filter, map, take} from "rxjs";
 import {FocusService} from "../service/focus/focus.service";
-import {ModalService} from "../../modal/service/modal.service";
-import {PreloaderService} from "../../preloader/service/preloader.service";
-import {LanguageService} from "../../language/language-service/language.service";
+import {ModalService} from "../../../services/modal/service/modal.service";
+import {PreloaderService} from "../../../services/preloader/service/preloader.service";
+import {LanguageService} from "../../../services/language/language-service/language.service";
 
 @Component({
   selector: 'app-order',

@@ -3,10 +3,10 @@ import {ActivatedRouteSnapshot, Resolve, RouterStateSnapshot} from '@angular/rou
 import {catchError, EMPTY, finalize, Observable} from 'rxjs';
 import {OrderService} from "../service/order.service";
 import {Order} from "../model/order.model";
-import {ModalService} from "../../modal/service/modal.service";
-import {PreloaderService} from "../../preloader/service/preloader.service";
+import {ModalService} from "../../../services/modal/service/modal.service";
+import {PreloaderService} from "../../../services/preloader/service/preloader.service";
 import {StorageService} from "../storage/storage.service";
-import {LanguageService} from "../../language/language-service/language.service";
+import {LanguageService} from "../../../services/language/language-service/language.service";
 
 @Injectable({
   providedIn: 'root'

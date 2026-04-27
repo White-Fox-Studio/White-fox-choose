@@ -11,10 +11,10 @@ import {
   OrderItemGroupComponent
 } from './components/order-item/components/order-item-group-poses/order-item-group.component';
 import {OrderItemPoseComponent} from './components/order-item/components/order-item-pose/order-item-pose.component';
-import {ServTranslatePipe} from "../language/serv-translate/serv-translate.pipe";
+import {ServTranslatePipe} from "../../services/language/serv-translate/serv-translate.pipe";
 import {OrderItemPosesComponent} from './components/order-item/components/order-item-poses/order-item-poses.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {LanguagePipe} from "../language/language-pipe/language.pipe";
+import {LanguagePipe} from "../../services/language/language-pipe/language.pipe";
 import {OrderPackageComponent} from './components/order-package/order-package.component';
 import {PackageHeaderComponent} from './components/order-package/components/package-header/package-header.component';
 

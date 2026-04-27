@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {Layout, PackageLayout} from "../../../../model/order.model";
-import {LanguageService} from "../../../../../language/language-service/language.service";
+import {LanguageService} from "../../../../../../services/language/language-service/language.service";
 
 @Component({
   selector: 'app-order-item-group',

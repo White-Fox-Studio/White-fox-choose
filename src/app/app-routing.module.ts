@@ -6,10 +6,10 @@ const routes: Routes = [{
   path: '', redirectTo: 'form', pathMatch: 'full',
 },{
   path: 'form',
-  loadChildren: () => import('./form/form.module').then(m => m.FormModule),
+  loadChildren: () => import('./modules/form/form.module').then(m => m.FormModule),
 },{
   path: 'order/:orderId/:studentLastName',
-  loadChildren: () => import('./order/order.module').then(m => m.OrderModule),
+  loadChildren: () => import('./modules/order/order.module').then(m => m.OrderModule),
 },{
   path: 'copyright', component: CopyrightComponent
 },{

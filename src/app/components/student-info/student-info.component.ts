@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {OrderService} from "../../order/service/order.service";
-import {StorageService} from "../../order/storage/storage.service";
+import {OrderService} from "../../modules/order/service/order.service";
+import {StorageService} from "../../modules/order/storage/storage.service";
 
 @Component({
   selector: 'app-student-info',
