@@ -1,10 +1,10 @@
 import {Component} from '@angular/core';
 import {take} from "rxjs";
-import {Language} from "../../models/language.model";
+import {Language} from "../../../services/language/models/language.model";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
-import {RestrictDirectiveErrors} from "../../dirrectives/input-restrict.directive";
-import {PreloaderService} from "../../preloader/service/preloader.service";
+import {RestrictDirectiveErrors} from "../../../dirrectives/input-restrict.directive";
+import {PreloaderService} from "../../../services/preloader/service/preloader.service";
 
 @Component({
   selector: 'app-form',

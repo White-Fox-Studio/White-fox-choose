@@ -10,7 +10,7 @@ import {
   ViewChild
 } from '@angular/core';
 import {Pose} from "../../../../model/order.model";
-import {LanguageService} from "../../../../../language/language-service/language.service";
+import {LanguageService} from "../../../../../../services/language/language-service/language.service";
 import {FormControl, Validators} from "@angular/forms";
 import {StorageService} from "../../../../storage/storage.service";
 import {SelectionItem} from "../../../../storage/storage.model";

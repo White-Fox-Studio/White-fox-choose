@@ -5,13 +5,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {NgOptimizedImage} from "@angular/common";
 import {HttpClientModule} from "@angular/common/http";
-import {LanguagePipe} from './language/language-pipe/language.pipe';
-import {ModalComponent} from './modal/modal.component';
-import {PreloaderComponent} from './preloader/preloader.component';
+import {LanguagePipe} from './services/language/language-pipe/language.pipe';
+import {ModalComponent} from './services/modal/modal.component';
+import {PreloaderComponent} from './services/preloader/preloader.component';
 import {StudentInfoComponent} from './components/student-info/student-info.component';
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from "./components/footer/footer.component";
-import {ServTranslatePipe} from './language/serv-translate/serv-translate.pipe';
+import {ServTranslatePipe} from './services/language/serv-translate/serv-translate.pipe';
 import {CopyrightComponent} from './components/copyright/copyright.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 

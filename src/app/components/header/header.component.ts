@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
-import {LanguageService} from "../../language/language-service/language.service";
-import {OrderService} from "../../order/service/order.service";
-import {ScrollService} from "../../scroll/scroll.service";
+import {LanguageService} from "../../services/language/language-service/language.service";
+import {OrderService} from "../../modules/order/service/order.service";
+import {ScrollService} from "../../services/scroll/scroll.service";
 import {combineLatest, filter, map, startWith} from "rxjs";
 import {NavigationEnd, Router} from "@angular/router";
 

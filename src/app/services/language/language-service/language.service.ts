@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
-import {Language} from "../../models/language.model";
+import {Language} from "../models/language.model";
 import {IDictionary} from "../dictionaries/dictionary.model";
-import * as enJson from "../../../assets/i18n/en.json"
-import * as thJson from "../../../assets/i18n/th.json"
+import * as enJson from "../../../../assets/i18n/en.json"
+import * as thJson from "../../../../assets/i18n/th.json"
 
 export const EN_DICTIONARY: IDictionary = enJson as unknown as IDictionary;
 export const TH_DICTIONARY: IDictionary = thJson as unknown as IDictionary;
