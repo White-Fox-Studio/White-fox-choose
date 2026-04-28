@@ -5,6 +5,9 @@ import {CopyrightComponent} from "./components/copyright/copyright.component";
 const routes: Routes = [{
   path: '', redirectTo: 'form', pathMatch: 'full',
 },{
+  path: 'catalog',
+  loadChildren: () => import('./modules/catalog/catalog.module').then(m => m.CatalogModule),
+},{
   path: 'form',
   loadChildren: () => import('./modules/form/form.module').then(m => m.FormModule),
 },{

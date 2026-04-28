@@ -5,7 +5,9 @@ module.exports = async function (req, res) {
 
   try {
     const headers = {
-      'apikey': process.env.SUPABASE_PUBLISHABLE_KEY
+      'Content-Type': 'application/json',
+      'apikey': process.env.SUPABASE_PUBLISHABLE_KEY,
+      'x-secret-token': process.env.MY_SECRET_TOKEN
     };
 
     // Добавили packRes (запрос пакетов)
