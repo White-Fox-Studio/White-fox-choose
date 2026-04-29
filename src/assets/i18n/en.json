@@ -16,5 +16,6 @@
   "poseErrorMessageTo": "to",
   "sendOrderButton": "Save Choices",
   "sendSuccessTitle": "Your choice saved successfully.",
-  "sendSuccessMessage": "All photos saved, order sent for printing </br></br> If you have made a mistake or changed your mind, you can change your choice on this page within 72 hours"
+  "sendSuccessMessage": "All photos saved, order sent for printing </br></br> If you have made a mistake or changed your mind, you can change your choice on this page within 72 hours",
+  "landingRotateMessage": "For the best experience,<br>please rotate your phone."
 }

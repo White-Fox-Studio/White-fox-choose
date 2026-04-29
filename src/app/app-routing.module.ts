@@ -3,7 +3,10 @@ import {RouterModule, Routes} from '@angular/router';
 import {CopyrightComponent} from "./components/copyright/copyright.component";
 
 const routes: Routes = [{
-  path: '', redirectTo: 'form', pathMatch: 'full',
+  path: '', redirectTo: 'main', pathMatch: 'full',
+},{
+  path: 'main',
+  loadChildren: () => import('./modules/landing/landing.module').then(m => m.LandingModule),
 },{
   path: 'form',
   loadChildren: () => import('./modules/form/form.module').then(m => m.FormModule),

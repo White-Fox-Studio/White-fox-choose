@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
 import {Language} from "../models/language.model";
-import {IDictionary} from "../dictionaries/dictionary.model";
+import {IDictionary} from "../language-pipe/dictionary.model";
 import * as enJson from "../../../../assets/i18n/en.json"
 import * as thJson from "../../../../assets/i18n/th.json"
 
