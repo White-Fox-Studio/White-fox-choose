@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 12px;
   width: 100%;
   background: var(--bg-primary);
 }
@@ -18,10 +18,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: calc((100vh - 96px) * 1.4);
     max-width: 900px;
-
-    &.hidden {
-      display: none;
+    @media (max-width: 900px) {
+      max-width: 100%;
     }
   }
 
@@ -44,7 +44,7 @@
 
 .rotate {
   &-overlay {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -55,10 +55,6 @@
     height: 100%;
     background: var(--modal-overlay);
     z-index: 9999;
-
-    &.hidden {
-      display: none;
-    }
   }
 
   &-content {
@@ -85,4 +81,14 @@
   0% { transform: rotate(0deg); }
   50% { transform: rotate(-90deg); }
   100% { transform: rotate(0deg); }
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+  .rotate-overlay {
+    display: flex;
+  }
+
+  .page-container {
+    display: none;
+  }
 }

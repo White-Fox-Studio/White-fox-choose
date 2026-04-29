@@ -5,38 +5,38 @@ export interface Page {
 
 export const PAGES: Page[] = [{
   img: 'page01.jpg',
-  alt: 'Page 1',
+  alt: 'School Photo Catalog 2026 - White Fox Studio',
 },{
   img: 'page02.jpg',
-  alt: 'Page 2',
+  alt: 'Instructions school photo products and packages - Page 2',
 },{
   img: 'page03.jpg',
-  alt: 'Page 3',
+  alt: 'ACRYLIC PHOTO ภาพถ่ายอะคริลิค - Page 3',
 },{
   img: 'page04.jpg',
-  alt: 'Page 4',
+  alt: 'FLOAT FRAME กรอบลอย - Page 4',
 },{
   img: 'page05.jpg',
-  alt: 'Page 5',
+  alt: 'CANVAS ภาพแคนวาส - Page 5',
 },{
   img: 'page06.jpg',
-  alt: 'Page 6',
+  alt: 'FRAMES กรอบรูป - Page 6',
 },{
   img: 'page07.jpg',
-  alt: 'Page 7',
+  alt: 'PHOTO BOOKS โฟโต้บุ๊ค - Page 7',
 },{
   img: 'page08.jpg',
-  alt: 'Page 8',
+  alt: 'CALENDARS ปฏิทิน - Page 8',
 },{
   img: 'page09.jpg',
-  alt: 'Page 9',
+  alt: 'BOTTLES and MUGS ขวดน้ำและแก้วมัค - Page 9',
 },{
   img: 'page10.jpg',
-  alt: 'Page 10',
+  alt: 'SHAKING HEADS and STICKERS สแตนดี้หัวโยกดุ๊กดิ๊กและสติ๊กเกอร์ - Page 10',
 },{
   img: 'page11.jpg',
-  alt: 'Page 11',
+  alt: 'PHOTO GIFTS ของที่ระลึก - Page 11',
 },{
   img: 'page12.jpg',
-  alt: 'Page 12',
+  alt: 'PHOTO and POSTERS ภาพถ่ายและโปสเตอร์ - Page 12',
 }]
