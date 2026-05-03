@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Page, PAGES} from "../constants/pages";
 
 @Component({
@@ -6,6 +6,14 @@ import {Page, PAGES} from "../constants/pages";
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.scss']
 })
-export class LandingComponent {
-  pages: Page[] = PAGES
+export class LandingComponent implements OnInit {
+  @ViewChild('mySwiper') swiperRef!: ElementRef;
+  pages: Page[] = PAGES;
+  showSwiper: boolean = false;
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.swiperRef.nativeElement.initialize();
+    }, 100)
+  }
 }
