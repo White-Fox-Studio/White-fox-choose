@@ -24,8 +24,11 @@
       <swiper-slide *ngFor="let page of pages"
                     class="page-block">
         <div class="swiper-zoom-container">
-          <img [src]="'/assets/images/landing/'+page.img" [alt]="page.alt">
+          <img [src]="'/assets/images/landing/'+page.img" [alt]="page.alt" (click)="setFullscreen(page)">
         </div>
       </swiper-slide>
     </swiper-container>
+</div>
+<div class="fullscreen-overlay" *ngIf="fullscreen" (click)="fullscreen = null">
+  <img [src]="'/assets/images/landing/' + fullscreen.img" [alt]="fullscreen.alt">
 </div>

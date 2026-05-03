@@ -9,11 +9,17 @@ import {Page, PAGES} from "../constants/pages";
 export class LandingComponent implements OnInit {
   @ViewChild('mySwiper') swiperRef!: ElementRef;
   pages: Page[] = PAGES;
-  showSwiper: boolean = false;
+  fullscreen: Page | null = null;
 
   ngOnInit() {
     setTimeout(() => {
       this.swiperRef.nativeElement.initialize();
     }, 100)
+  }
+
+  setFullscreen(page: Page) {
+    if (window.innerWidth <=900 ) {
+      this.fullscreen = page;
+    }
   }
 }
