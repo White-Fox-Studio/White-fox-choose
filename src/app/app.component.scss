@@ -12,7 +12,7 @@
   flex-grow: 1;
   width: 100vw;
 
-  @media (max-width: 900px) and (orientation: landscape) {
+  @media (max-width: 768px) and (orientation: landscape) {
     margin: 0 auto 0;
   }
 }
