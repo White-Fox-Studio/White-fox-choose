@@ -11,6 +11,7 @@
   padding: 12px;
   width: 100%;
   background: var(--bg-primary);
+  overflow: hidden;
 }
 
 .page {
@@ -22,6 +23,7 @@
     width: calc((100vh - 96px) * 1.4);
     max-width: 900px;
     @media (max-width: 900px) {
+      width: calc((100vh - 34px) * 1.4);
       max-width: 100%;
     }
   }
@@ -114,6 +116,10 @@
   }
 
   .page-container {
+    display: none;
+  }
+
+  .fullscreen-overlay {
     display: none;
   }
 }

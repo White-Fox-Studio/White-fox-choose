@@ -14,6 +14,10 @@
   justify-content: space-between;
   flex-wrap: nowrap;
   gap: 0.8rem;
+
+  @media (max-width: 900px) and (orientation: landscape) {
+    position: relative;
+  }
 }
 
 .logo {

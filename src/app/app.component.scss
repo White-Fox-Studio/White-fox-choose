@@ -11,6 +11,10 @@
   //justify-content: center;
   flex-grow: 1;
   width: 100vw;
+
+  @media (max-width: 900px) and (orientation: landscape) {
+    margin: 0 auto 0;
+  }
 }
 
 app-header, app-footer {
