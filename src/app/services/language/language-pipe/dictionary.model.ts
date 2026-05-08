@@ -17,4 +17,5 @@ export interface IDictionary {
   sendOrderButton: string,
   sendSuccessTitle: string,
   sendSuccessMessage: string,
+  landingRotateMessage: string;
 }
