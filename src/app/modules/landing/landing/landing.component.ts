@@ -1,5 +1,11 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
 import {Page, PAGES} from "../constants/pages";
+import Swiper from 'swiper';
+
+interface SwiperContainerElement extends HTMLElement {
+  swiper: Swiper;
+  initialize: () => void;
+}
 
 @Component({
   selector: 'app-landing',
@@ -7,14 +13,15 @@ import {Page, PAGES} from "../constants/pages";
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
-  @ViewChild('mySwiper') swiperRef!: ElementRef;
+  @ViewChild('mySwiper') swiperRef!: ElementRef<SwiperContainerElement>;
+  @ViewChild('fullscreenSwiper') fullscreenSwiperRef?: ElementRef<SwiperContainerElement>;
   pages: Page[] = PAGES;
-  fullscreen: Page | null = null;
+  fullscreen: number = -1;
   @HostListener('window:orientationchange', ['$event'])
   @HostListener('window:resize', ['$event'])
   onOrientationChange() {
-    if (window.innerWidth <= 900 && window.innerWidth > window.innerHeight) {
-      this.el.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    if (this.checkMobile && window.innerWidth > window.innerHeight) {
+      this.el.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
@@ -28,9 +35,22 @@ export class LandingComponent implements OnInit {
     }, 100)
   }
 
-  setFullscreen(page: Page) {
-    if (window.innerWidth <=900 ) {
-      this.fullscreen = page;
+  setFullscreen(index: number) {
+    if (this.checkMobile) {
+      this.fullscreen = index;
+
+      setTimeout(() => {
+        const swiperEl = this.fullscreenSwiperRef?.nativeElement;
+
+        if (swiperEl && swiperEl.swiper) {
+          swiperEl.swiper.slideTo(index, 0);
+        }
+      }, 50);
+
     }
+  }
+
+  get checkMobile() {
+    return window.matchMedia('(pointer: coarse)').matches
   }
 }

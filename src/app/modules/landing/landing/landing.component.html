@@ -20,14 +20,26 @@
       observe-parents="true"
       class="page-container"
     >
-      <swiper-slide *ngFor="let page of pages"
+      <swiper-slide *ngFor="let page of pages; let i = index"
                     class="page-block">
-        <div class="swiper-zoom-container">
-          <img [src]="'/assets/images/landing/'+page.img" [alt]="page.alt" (click)="setFullscreen(page)">
-        </div>
+          <img [src]="'/assets/images/landing/'+page.img" [alt]="page.alt" (click)="setFullscreen(i)">
       </swiper-slide>
     </swiper-container>
 </div>
-<div class="fullscreen-overlay" *ngIf="fullscreen" (click)="fullscreen = null">
-  <img [src]="'/assets/images/landing/' + fullscreen.img" [alt]="fullscreen.alt">
+<div class="fullscreen-overlay" *ngIf="fullscreen >= 0">
+
+  <div class="close-btn" (click)="fullscreen = -1">✕</div>
+
+  <swiper-container
+    zoom="true"
+    #fullscreenSwiper
+    [attr.initial-slide]="fullscreen"
+    class="fullscreen-overlay-swiper"
+  >
+    <swiper-slide *ngFor="let page of pages">
+      <div class="swiper-zoom-container">
+        <img [src]="'/assets/images/landing/' + page.img" [alt]="page.alt">
+      </div>
+    </swiper-slide>
+  </swiper-container>
 </div>
